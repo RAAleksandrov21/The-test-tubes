@@ -19,3 +19,30 @@ void greet()  //Prints the name of the game and a slogan
         cout << endl;
     }
 }
+
+
+void menu()  // Main Menu
+{
+    cout << setw(116) << "Choose a gamemode:" << endl;
+    cout << endl;
+
+    cout << setw(121) << "============================" << endl;
+    cout << setw(121) << "|          Ecology         |" << endl;
+    cout << setw(121) << "============================" << endl;
+    cout << setw(121) << "============================" << endl;
+    cout << setw(121) << "|          Biology         |" << endl;
+    cout << setw(121) << "============================" << endl;
+    cout << setw(121) << "============================" << endl;
+    cout << setw(121) << "|         Chemistry        |" << endl;
+    cout << setw(121) << "============================" << endl;
+    cout << setw(121) << "============================" << endl;
+    cout << setw(121) << "|           Quit           |" << endl;
+    cout << setw(121) << "============================" << endl;
+    cout << endl;
+    cout << setw(119) << "1. Ecology - instructions" << endl;
+    cout << setw(119) << "2. Biology - instructions" << endl;
+    cout << setw(121) << "3. Chemistry - instructions" << endl;
+    cout << setw(101) << "4. Quit" << endl;
+    cout << endl;
+    cout << setw(113) << "Enter your choice: ";
+}
