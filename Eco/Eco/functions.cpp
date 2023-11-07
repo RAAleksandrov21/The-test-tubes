@@ -63,3 +63,24 @@ void displayStatus(int forestHealth, int waterQuality, int speciesCount) {
     cout << "Species Count: " << speciesCount << endl;
 }
 
+void applyDecision(int& forestHealth, int& waterQuality, int& speciesCount, int decision) {
+    switch (decision) {
+    case 1: // Decision 1: Address deforestation
+        forestHealth += 10;
+        waterQuality -= 5;
+        speciesCount -= 10;
+        break;
+    case 2: // Decision 2: Tackle pollution
+        forestHealth -= 5;
+        waterQuality += 10;
+        speciesCount -= 5;
+        break;
+    case 3: // Decision 3: Protect endangered species
+        forestHealth -= 10;
+        waterQuality -= 10;
+        speciesCount += 20;
+        break;
+        // Add more decisions and their effects
+    }
+}
+

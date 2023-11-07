@@ -49,6 +49,9 @@ int main()
                     continue;
                 }
 
+                applyDecision(forestHealth, waterQuality, speciesCount, decision);
+
+                
             }
         }
 
