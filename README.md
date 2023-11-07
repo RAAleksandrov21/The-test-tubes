@@ -10,7 +10,7 @@
 ## 📝 Table of contents
 
 - [Description](#description)
-- [Technologies](#used-technologies)
+- [Technologies](#technologies)
 - [Documents](#documents)
 - [Contributors](#contributors)
 - [Download](#download)
@@ -23,9 +23,9 @@
 </p>
 Our task was to relate the game to chemistry and biology. We tried to do that as much as possible. In our game you will see how chemistry, biology and ecology are involved, there are several mini games from the start menu you can choose your game.
 
-## ⚒️ Technologies <a name="built_using"></a>
+## ⚒️ Technologies <a name="technologies"></a>
 
-- [Visual Studio](https://visualstudio.microsoft.com/) - Application <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fapps.microsoft.com%2Fdetail%2Fvisual-studio-community-2019%2FXP8CDJNZKFM06W%3Fhl%3Dbg-bg%26gl%3DUS&psig=AOvVaw0n7MtNepkKtT5yMfTBLvZm&ust=1699466322474000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCqica7soIDFQAAAAAdAAAAABAE" width="25">
+- [Visual Studio](https://visualstudio.microsoft.com/) - Application 
 - [Word](https://www.microsoft.com/en-us/microsoft-365/word) - Documentation
 - [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) - Presentation
 - [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) - QA Documentation
@@ -40,7 +40,7 @@ Our task was to relate the game to chemistry and biology. We tried to do that as
 - Game Testing
 
 
-## 🧑🏻‍💻 Contributors <a name="our_team"></a>
+## 🧑🏻‍💻 Contributors <a name="contributors"></a>
 
 - <a href = "https://github.com/RAAleksandrov21"> Radomir Aleksandrov </a> (Scrum Trainer)
 -   <a href = "https://github.com/SZGeorgiev21"> Stilian Georgiev </a> (Front-end Developer)
