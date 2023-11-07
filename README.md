@@ -1,6 +1,6 @@
 <h1>Team The test tube</h1>
 <p align = "center">
-  <img src = "" alt = "" width="550px">
+  <img src = "Logo_for_team/logo_team.png" alt = "logo_team.png" width="800px">
 </p>
 
 <hr>
