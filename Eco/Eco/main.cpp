@@ -51,7 +51,10 @@ int main()
 
                 applyDecision(forestHealth, waterQuality, speciesCount, decision);
 
-                
+                if (isEcoSystemBalanced(forestHealth, waterQuality, speciesCount)) {
+                    cout << "Congratulations! You've successfully conserved the ecosystem." << endl;
+                    break;
+                }
             }
         }
 

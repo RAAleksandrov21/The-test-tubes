@@ -84,3 +84,6 @@ void applyDecision(int& forestHealth, int& waterQuality, int& speciesCount, int 
     }
 }
 
+bool isEcoSystemBalanced(int forestHealth, int waterQuality, int speciesCount) {
+    return (forestHealth > 50 && waterQuality > 50 && speciesCount > 50);
+}
