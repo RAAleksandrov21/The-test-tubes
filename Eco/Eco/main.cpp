@@ -26,7 +26,7 @@ int main()
         }
         system("cls");
 
-        if (choice == 1)
+        if (choice == 1 || choice == 2 || choice == 3)
         {
             greet();
 
@@ -75,7 +75,7 @@ int main()
                 applyDecision(airQuality, waterQuality, speciesCount, decision, result3);
 
 
-                if (isEcoSystemBalanced(airQuality, waterQuality, speciesCount)) {
+                if (isEcoSystemBalanced(airQuality, waterQuality, speciesCount, choice)) {
                     cout << "Congratulations! You've successfully conserved the ecosystem." << endl;
                     break;
                 }

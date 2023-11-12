@@ -12,4 +12,4 @@ int random3(int previousResult1, int previousResult2);
 void generateQuestion(int question);
 void displayStatus(int airQuality, int waterQuality, int speciesCount);
 void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int decision, int answer);
-bool isEcoSystemBalanced(int airQuality, int waterQuality, int speciesCount);
+bool isEcoSystemBalanced(int airQuality, int waterQuality, int speciesCount, int difficulty);

@@ -322,6 +322,17 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
     }
 }
 
-bool isEcoSystemBalanced(int airQuality, int waterQuality, int speciesCount) {
-    return (airQuality > 15 && waterQuality > 15 && speciesCount > 15);
+bool isEcoSystemBalanced(int airQuality, int waterQuality, int speciesCount, int difficulty) {
+    if (difficulty == 1)
+    {
+        return (airQuality > 5 && waterQuality > 5 && speciesCount > 5);
+    }
+    if (difficulty == 2)
+    {
+        return (airQuality > 10 && waterQuality > 10 && speciesCount > 10);
+    }
+    if (difficulty == 3)
+    {
+        return (airQuality > 15 && waterQuality > 15 && speciesCount > 15);
+    }
 }
