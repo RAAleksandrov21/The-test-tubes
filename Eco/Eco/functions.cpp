@@ -27,13 +27,13 @@ void menu()  // Main Menu
     cout << endl;
 
     cout << setw(121) << "============================" << endl;
-    cout << setw(121) << "|          Ecology         |" << endl;
+    cout << setw(121) << "|           Easy           |" << endl;
     cout << setw(121) << "============================" << endl;
     cout << setw(121) << "============================" << endl;
-    cout << setw(121) << "|          Biology         |" << endl;
+    cout << setw(121) << "|          Normal          |" << endl;
     cout << setw(121) << "============================" << endl;
     cout << setw(121) << "============================" << endl;
-    cout << setw(121) << "|         Chemistry        |" << endl;
+    cout << setw(121) << "|           Hard           |" << endl;
     cout << setw(121) << "============================" << endl;
     cout << setw(121) << "============================" << endl;
     cout << setw(121) << "|           Quit           |" << endl;

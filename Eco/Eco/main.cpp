@@ -16,6 +16,9 @@ int main()
     do {
         system("cls");
         greet();
+        airQuality = 0;
+        waterQuality = 0;
+        speciesCount = 0;
         int choice;
         menu();
         cin >> choice;
