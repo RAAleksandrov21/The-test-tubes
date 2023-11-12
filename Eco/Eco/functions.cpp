@@ -48,11 +48,35 @@ void menu()  // Main Menu
 }
 
 
-int random()
-{
-    srand(time(NULL));
-    int a = rand() % 9 + 1;
-    cout << a;
+void seedRandomGenerator() {
+    static bool seeded = false;
+    if (!seeded) {
+        srand(time(NULL));
+        seeded = true;
+    }
+}
+
+int generateDifferentRandom(int previousResult1, int previousResult2) {
+    int newResult;
+    do {
+        newResult = rand() % 9 + 1;
+    } while (newResult == previousResult1 || newResult == previousResult2);
+    return newResult;
+}
+
+int random1() {
+    seedRandomGenerator();
+    return generateDifferentRandom(0, 0);
+}
+
+int random2(int previousResult1) {
+    seedRandomGenerator();
+    return generateDifferentRandom(previousResult1, 0);
+}
+
+int random3(int previousResult1, int previousResult2) {
+    seedRandomGenerator();
+    return generateDifferentRandom(previousResult1, previousResult2);
 }
 
 
@@ -61,31 +85,58 @@ void generateQuestion(int question)
     switch (question)
     {
         case 1:
-            cout << "Deforestation";
+            cout << "Deforestation" << endl;
+            cout << "1.Planting trees to restore and expand forested areas." << endl;
+            cout << "2.Implementing responsible logging (Targeting only specific trees for harvest rather than clear-cutting entire areas) practices to minimize environmental impact." << endl;
+            cout << "3.Encouraging responsible sourcing of wood and other forest products by companies." << endl;
             break;
         case 2:
-            cout << "Air Pollution";
+            cout << "Air Pollution" << endl;
+            cout << "1.Shifting to renewable energy sources such as solar and wind power." << endl;
+            cout << "2.Enforcing regulations on industries to reduce emissions." << endl;
+            cout << "3.Encouraging the use of public transport to reduce vehicle emissions." << endl;
             break;
         case 3:
-            cout << "Water Pollution";
+            cout << "Water Pollution" << endl;
+            cout << "1.Implementing effective wastewater treatment processes." << endl;
+            cout << "2.Encouraging the use of reusable products and reducing single-use plastics." << endl;
+            cout << "3.Enforcing regulations on industries to prevent water pollution." << endl;
             break;
         case 4:
-            cout << "Climate Change";
+            cout << "Climate Change" << endl;
+            cout << "1.Increasing the use of renewable energy sources to reduce carbon emissions." << endl;
+            cout << "2.Implementing energy-efficient technologies and practices." << endl;
+            cout << "3.Participating in global efforts to address climate change, such as the Paris Agreement." << endl;
             break;
         case 5:
-            cout << "Habitat Conservation";
+            cout << "Loss of Biodiversity" << endl;
+            cout << "1.Protecting and preserving natural habitats." << endl;
+            cout << "2.Implementing sustainable agriculture and fishing methods." << endl;
+            cout << "3.Supporting initiatives that focus on the protection of endangered species." << endl;
             break;
         case 6:
-            cout << "Fishing Quotas";
+            cout << "Overfishing" << endl;
+            cout << "1.Implementing and enforcing fishing quotas to ensure sustainable harvesting." << endl;
+            cout << "2.Establishing protected zones to allow fish populations to recover." << endl;
+            cout << "3.Encouraging consumers to choose sustainably sourced seafood." << endl;
             break;
         case 7:
-            cout << "Soil Erosion";
+            cout << "Soil Erosion" << endl;
+            cout << "1.Implementing practices that maintain soil health, such as minimal tillage." << endl;
+            cout << "2.Planting trees to prevent soil erosion and enhance soil structure." << endl;
+            cout << "3.Creating grassed waterways in agricultural areas to channel water flow." << endl;
             break;
         case 8:
-            cout << "Waste Management";
+            cout << "Waste Management" << endl;
+            cout << "1.Promoting recycling and responsible waste disposal." << endl;
+            cout << "2.Encouraging the use of reusable items to minimize plastic waste." << endl;
+            cout << "3.Utilize waste-to-energy technologies to convert non-recyclable waste into energy." << endl;
             break;
         case 9:
-            cout << "Invasive Species";
+            cout << "Invasive Species" << endl;
+            cout << "1.Monitoring and addressing the presence of invasive species." << endl;
+            cout << "2.Implementing measures to prevent the introduction of invasive species." << endl;
+            cout << "3.Use physical methods such as cutting, mowing, or pulling to control invasive plants. Install barriers or screens to prevent the movement of invasive animals." << endl;
             break;
     }
 }
@@ -123,7 +174,7 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             waterQuality += 0;
             speciesCount += 0;
             break;
-        }
+        }break;
     case 2:
         switch (decision) {
         case 1:
@@ -141,7 +192,7 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             waterQuality += 5;
             speciesCount += 2;
             break;
-        }
+        }break;
     case 3:
         switch (decision) {
         case 1:
@@ -159,7 +210,7 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             waterQuality += 5;
             speciesCount += 5;
             break;
-        }
+        }break;
     case 4:
         switch (decision) {
         case 1:
@@ -177,7 +228,7 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             waterQuality += 5;
             speciesCount += 5;
             break;
-        }
+        }break;
     case 5:
         switch (decision) {
         case 1:
@@ -195,7 +246,7 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             waterQuality += 0;
             speciesCount += 10;
             break;
-        }
+        }break;
     case 6:
         switch (decision) {
         case 1:
@@ -213,7 +264,7 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             waterQuality += 0;
             speciesCount += 5;
             break;
-        }
+        }break;
     case 7:
         switch (decision) {
         case 1:
@@ -227,11 +278,11 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             speciesCount += 5;
             break;
         case 3:
-            airQuality += 10;
-            waterQuality += 10;
-            speciesCount += 20;
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 5;
             break;
-        }
+        }break;
     case 8:
         switch (decision) {
         case 1:
@@ -245,11 +296,11 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             speciesCount += 10;
             break;
         case 3:
-            airQuality += 10;
-            waterQuality += 10;
-            speciesCount += 20;
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 5;
             break;
-        }
+        }break;
     case 9:
         switch (decision) {
         case 1:
@@ -263,11 +314,11 @@ void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int de
             speciesCount += 5;
             break;
         case 3:
-            airQuality += 10;
-            waterQuality += 10;
-            speciesCount += 20;
+            airQuality += 0;
+            waterQuality += 5;
+            speciesCount += 5;
             break;
-        }
+        }break;
     }
 }
 
