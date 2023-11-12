@@ -5,9 +5,14 @@
 
 using namespace std;
 
+int airQuality = 0;
+int waterQuality = 0;
+int speciesCount = 0;
+
 int main()
 {
     char playAgain;
+    bool failed = false;
     do {
         system("cls");
         greet();
@@ -24,9 +29,6 @@ int main()
         if (choice == 1)
         {
             greet();
-            int airQuality = 0;
-            int waterQuality = 0;
-            int speciesCount = 0;
 
             cout << "Welcome to Eco-Conservation Challenge!" << endl;
             cout << "You are responsible for the health of a virtual ecosystem." << endl;
@@ -79,14 +81,17 @@ int main()
                 }
                 else
                 {
-                    cout << "You couldn't conserve the ecosystem :(";
+                    cout << "You couldn't conserve the ecosystem :(" << endl;
+                    failed = true;
+                    break;
                 }
             }
         }
-
+        displayStatus(airQuality, waterQuality, speciesCount);
 
         cout << endl;
         cout << setw(108) << "Play again? (Y/N)";
         cin >> playAgain;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     } while (playAgain == 'y' || playAgain == 'Y');
 }
