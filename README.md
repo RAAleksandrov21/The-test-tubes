@@ -21,7 +21,7 @@
 <p align = "center">
   <img src = "Logo_for_team/Logo_game.png" alt = "Logo_game.png" width="500px">
 </p>
-Our task was to relate the game to chemistry and biology. We tried to do that as much as possible. In our game you will see how chemistry, biology and ecology are involved, there are several mini games from the start menu you can choose your game.
+Our task was to connect the game with chemistry and biology. We tried to do that as much as possible. In our game you will see three levels of difficulty , it is completely related to ecology and the problems in it.
 
 ## ⚒️ Technologies <a name="technologies"></a>
 
@@ -45,7 +45,7 @@ Our task was to relate the game to chemistry and biology. We tried to do that as
 - <a href = "https://github.com/RAAleksandrov21"> Radomir Aleksandrov </a> (Scrum Trainer)
 -   <a href = "https://github.com/SZGeorgiev21"> Stilian Georgiev </a> (Front-end Developer)
 - <a href = "https://github.com/EEMustafa21"> Enis Mustafa </a> (Back-end Developer)
--  <a href = "https://github.com/SSPopov21"> Stanimir Popov </a> (QA Engineer)
+-  <a href = "https://github.com/SSPopov21"> Stanimir Popov </a> (Designer)
 
 ## 📥 Download <a name="download"></a>
 
