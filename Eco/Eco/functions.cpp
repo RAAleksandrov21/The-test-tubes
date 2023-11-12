@@ -104,24 +104,170 @@ void displayStatus(int airQuality, int waterQuality, int speciesCount) {
     cout << "Species Count: " << speciesCount << endl;
 }
 
-void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int decision) {
-    switch (decision) {
-    case 1: // Decision 1: Address deforestation
-        airQuality += 10;
-        waterQuality -= 5;
-        speciesCount -= 10;
-        break;
-    case 2: // Decision 2: Tackle pollution
-        airQuality -= 5;
-        waterQuality += 10;
-        speciesCount -= 5;
-        break;
-    case 3: // Decision 3: Protect endangered species
-        airQuality -= 10;
-        waterQuality -= 10;
-        speciesCount += 20;
-        break;
-        // Add more decisions and their effects
+void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int decision, int answer) {
+    switch (answer) {
+    case 1:
+        switch (decision) {
+        case 1:
+            airQuality += 10;
+            waterQuality += 0;
+            speciesCount += 5;
+            break;
+        case 2:
+            airQuality += 5;
+            waterQuality += 0;
+            speciesCount += 0;
+            break;
+        case 3:
+            airQuality += 5;
+            waterQuality += 0;
+            speciesCount += 0;
+            break;
+        }
+    case 2:
+        switch (decision) {
+        case 1:
+            airQuality += 10;
+            waterQuality += 5;
+            speciesCount += 5;
+            break;
+        case 2:
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 0;
+            break;
+        case 3:
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 2;
+            break;
+        }
+    case 3:
+        switch (decision) {
+        case 1:
+            airQuality += 0;
+            waterQuality += 10;
+            speciesCount += 5;
+            break;
+        case 2:
+            airQuality += 0;
+            waterQuality += 5;
+            speciesCount += 10;
+            break;
+        case 3:
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 5;
+            break;
+        }
+    case 4:
+        switch (decision) {
+        case 1:
+            airQuality += 10;
+            waterQuality += 5;
+            speciesCount += 5;
+            break;
+        case 2:
+            airQuality += 5;
+            waterQuality += 2;
+            speciesCount += 2;
+            break;
+        case 3:
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 5;
+            break;
+        }
+    case 5:
+        switch (decision) {
+        case 1:
+            airQuality += 0;
+            waterQuality += 5;
+            speciesCount += 10;
+            break;
+        case 2:
+            airQuality += 0;
+            waterQuality += 0;
+            speciesCount += 10;
+            break;
+        case 3:
+            airQuality += 0;
+            waterQuality += 0;
+            speciesCount += 10;
+            break;
+        }
+    case 6:
+        switch (decision) {
+        case 1:
+            airQuality += 0;
+            waterQuality += 0;
+            speciesCount += 10;
+            break;
+        case 2:
+            airQuality += 0;
+            waterQuality += 5;
+            speciesCount += 10;
+            break;
+        case 3:
+            airQuality += 0;
+            waterQuality += 0;
+            speciesCount += 5;
+            break;
+        }
+    case 7:
+        switch (decision) {
+        case 1:
+            airQuality += 5;
+            waterQuality += 0;
+            speciesCount += 5;
+            break;
+        case 2:
+            airQuality += 5;
+            waterQuality += 0;
+            speciesCount += 5;
+            break;
+        case 3:
+            airQuality += 10;
+            waterQuality += 10;
+            speciesCount += 20;
+            break;
+        }
+    case 8:
+        switch (decision) {
+        case 1:
+            airQuality += 10;
+            waterQuality += 10;
+            speciesCount += 10;
+            break;
+        case 2:
+            airQuality += 10;
+            waterQuality += 10;
+            speciesCount += 10;
+            break;
+        case 3:
+            airQuality += 10;
+            waterQuality += 10;
+            speciesCount += 20;
+            break;
+        }
+    case 9:
+        switch (decision) {
+        case 1:
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 5;
+            break;
+        case 2:
+            airQuality += 5;
+            waterQuality += 5;
+            speciesCount += 5;
+            break;
+        case 3:
+            airQuality += 10;
+            waterQuality += 10;
+            speciesCount += 20;
+            break;
+        }
     }
 }
 

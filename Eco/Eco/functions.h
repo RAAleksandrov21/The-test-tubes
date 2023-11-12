@@ -7,5 +7,5 @@ void menu();
 int random();
 void generateQuestion(int question);
 void displayStatus(int airQuality, int waterQuality, int speciesCount);
-void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int decision);
+void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int decision, int answer);
 bool isEcoSystemBalanced(int airQuality, int waterQuality, int speciesCount);
