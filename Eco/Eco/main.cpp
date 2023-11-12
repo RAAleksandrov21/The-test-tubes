@@ -41,35 +41,44 @@ int main()
                 int result1 = random1();
                 int result2 = random2(result1);
                 int result3 = random3(result1, result2);
+                cout << endl;
                 generateQuestion(result1);
-                cout << "Enter your decision (1-3): ";
+                cout << endl;
+                generatePicture(result1);
+                cout << endl;
+                cout << "Enter your decision (1-3): " << endl;
                 int decision;
                 cin >> decision;
-
+                cout << endl;
                 if (decision < 1 || decision > 3) {
                     cout << "Invalid decision! Please enter a valid choice." << endl;
                     continue;
                 }
 
                 applyDecision(airQuality, waterQuality, speciesCount, decision, result1);
-
+                cout << endl;
                 generateQuestion(result2);
-
-                cout << "Enter your decision (1-3): ";
+                cout << endl;
+                generatePicture(result2);
+                cout << endl;
+                cout << "Enter your decision (1-3): " << endl;
                 cin >> decision;
-
+                cout << endl;
                 if (decision < 1 || decision > 3) {
                     cout << "Invalid decision! Please enter a valid choice." << endl;
                     continue;
                 }
 
                 applyDecision(airQuality, waterQuality, speciesCount, decision, result2);
+                cout << endl;
 
                 generateQuestion(result3);
-
-                cout << "Enter your decision (1-3): ";
+                cout << endl;
+                generatePicture(result3);
+                cout << endl;
+                cout << "Enter your decision (1-3): " << endl;
                 cin >> decision;
-
+                cout << endl;
                 if (decision < 1 || decision > 3) {
                     cout << "Invalid decision! Please enter a valid choice." << endl;
                     continue;
