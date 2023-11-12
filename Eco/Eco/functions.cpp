@@ -39,10 +39,10 @@ void menu()  // Main Menu
     cout << setw(121) << "|           Quit           |" << endl;
     cout << setw(121) << "============================" << endl;
     cout << endl;
-    cout << setw(119) << "1. Ecology - instructions" << endl;
-    cout << setw(119) << "2. Biology - instructions" << endl;
-    cout << setw(121) << "3. Chemistry - instructions" << endl;
-    cout << setw(101) << "4. Quit" << endl;
+    cout << setw(140) << "1. Easy - you have to score more than five points in every category" << endl;
+    cout << setw(141) << "2. Normal - you have to score more than ten points in every category" << endl;
+    cout << setw(143) << "3. Hard - you have to score more than fifteen points in every category" << endl;
+    cout << setw(80) << "4. Quit" << endl;
     cout << endl;
     cout << setw(113) << "Enter your choice: ";
 }
