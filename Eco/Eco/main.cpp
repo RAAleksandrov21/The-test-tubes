@@ -24,15 +24,15 @@ int main()
         if (choice == 1)
         {
             greet();
-            int forestHealth = 100;
-            int waterQuality = 100;
-            int speciesCount = 100;
+            int airQuality = 0;
+            int waterQuality = 0;
+            int speciesCount = 0;
 
             cout << "Welcome to Eco-Conservation Challenge!" << endl;
             cout << "You are responsible for the health of a virtual ecosystem." << endl;
 
             while (true) {
-                displayStatus(forestHealth, waterQuality, speciesCount);
+                displayStatus(airQuality, waterQuality, speciesCount);
 
                 cout << "Make a decision to conserve the ecosystem:" << endl;
                 cout << "1. Address deforestation" << endl;
@@ -49,9 +49,9 @@ int main()
                     continue;
                 }
 
-                applyDecision(forestHealth, waterQuality, speciesCount, decision);
+                applyDecision(airQuality, waterQuality, speciesCount, decision);
 
-                if (isEcoSystemBalanced(forestHealth, waterQuality, speciesCount)) {
+                if (isEcoSystemBalanced(airQuality, waterQuality, speciesCount)) {
                     cout << "Congratulations! You've successfully conserved the ecosystem." << endl;
                     break;
                 }

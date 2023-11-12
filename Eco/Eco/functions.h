@@ -4,6 +4,8 @@ using namespace std;
 void greet();
 void menu();
 
-void displayStatus(int forestHealth, int waterQuality, int speciesCount);
-void applyDecision(int& forestHealth, int& waterQuality, int& speciesCount, int decision);
-bool isEcoSystemBalanced(int forestHealth, int waterQuality, int speciesCount);
+int random();
+void generateQuestion(int question);
+void displayStatus(int airQuality, int waterQuality, int speciesCount);
+void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int decision);
+bool isEcoSystemBalanced(int airQuality, int waterQuality, int speciesCount);

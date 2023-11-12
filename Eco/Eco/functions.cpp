@@ -48,35 +48,76 @@ void menu()  // Main Menu
 }
 
 
+int random()
+{
+    srand(time(NULL));
+    int a = rand() % 9 + 1;
+    cout << a;
+}
+
+
+void generateQuestion(int question)
+{
+    switch (question)
+    {
+        case 1:
+            cout << "Deforestation";
+            break;
+        case 2:
+            cout << "Air Pollution";
+            break;
+        case 3:
+            cout << "Water Pollution";
+            break;
+        case 4:
+            cout << "Climate Change";
+            break;
+        case 5:
+            cout << "Habitat Conservation";
+            break;
+        case 6:
+            cout << "Fishing Quotas";
+            break;
+        case 7:
+            cout << "Soil Erosion";
+            break;
+        case 8:
+            cout << "Waste Management";
+            break;
+        case 9:
+            cout << "Invasive Species";
+            break;
+    }
+}
 
 
 struct EcoSystem {
-    int forestHealth;
+    int airQuality;
     int waterQuality;
     int speciesCount;
 };
 
-void displayStatus(int forestHealth, int waterQuality, int speciesCount) {
+void displayStatus(int airQuality, int waterQuality, int speciesCount) {
     cout << "Ecosystem Status:" << endl;
-    cout << "Forest Health: " << forestHealth << endl;
+    cout << "Air Quality: " << airQuality << endl;
     cout << "Water Quality: " << waterQuality << endl;
     cout << "Species Count: " << speciesCount << endl;
 }
 
-void applyDecision(int& forestHealth, int& waterQuality, int& speciesCount, int decision) {
+void applyDecision(int& airQuality, int& waterQuality, int& speciesCount, int decision) {
     switch (decision) {
     case 1: // Decision 1: Address deforestation
-        forestHealth += 10;
+        airQuality += 10;
         waterQuality -= 5;
         speciesCount -= 10;
         break;
     case 2: // Decision 2: Tackle pollution
-        forestHealth -= 5;
+        airQuality -= 5;
         waterQuality += 10;
         speciesCount -= 5;
         break;
     case 3: // Decision 3: Protect endangered species
-        forestHealth -= 10;
+        airQuality -= 10;
         waterQuality -= 10;
         speciesCount += 20;
         break;
@@ -84,6 +125,6 @@ void applyDecision(int& forestHealth, int& waterQuality, int& speciesCount, int 
     }
 }
 
-bool isEcoSystemBalanced(int forestHealth, int waterQuality, int speciesCount) {
-    return (forestHealth > 50 && waterQuality > 50 && speciesCount > 50);
+bool isEcoSystemBalanced(int airQuality, int waterQuality, int speciesCount) {
+    return (airQuality > 50 && waterQuality > 50 && speciesCount > 50);
 }
