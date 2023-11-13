@@ -33,8 +33,12 @@ int main()
         {
             greet();  // Display game title and slogan again
 
-            cout << "Welcome to Eco-Conservation Challenge!" << endl;
-            cout << "You are responsible for the health of a virtual ecosystem." << endl;
+            cout << setw(125) << "Welcome to Eco-Conservation Challenge!" << endl;
+            cout << setw(135) << "You are responsible for the health of a virtual ecosystem." << endl;
+            for (int i = 0; i < 10; i++)
+            {
+                cout << endl;
+            }
 
             while (true) {
                 displayStatus(airQuality, waterQuality, speciesCount);
@@ -51,8 +55,8 @@ int main()
                 cin >> decision;
                 cout << endl;
                 if (decision < 1 || decision > 3) {
-                    cout << "Invalid decision! Please enter a valid choice." << endl;
-                    continue;
+                    cout << "Invalid decision! You get 0 points." << endl;
+                    cout << endl;
                 }
 
                 applyDecision(airQuality, waterQuality, speciesCount, decision, result1);
@@ -65,8 +69,8 @@ int main()
                 cin >> decision;
                 cout << endl;
                 if (decision < 1 || decision > 3) {
-                    cout << "Invalid decision! Please enter a valid choice." << endl;
-                    continue;
+                    cout << "Invalid decision! You get 0 points." << endl;
+                    cout << endl;
                 }
 
                 applyDecision(airQuality, waterQuality, speciesCount, decision, result2);
@@ -80,8 +84,8 @@ int main()
                 cin >> decision;
                 cout << endl;
                 if (decision < 1 || decision > 3) {
-                    cout << "Invalid decision! Please enter a valid choice." << endl;
-                    continue;
+                    cout << "Invalid decision! You get 0 points." << endl;
+                    cout << endl;
                 }
 
                 applyDecision(airQuality, waterQuality, speciesCount, decision, result3);
