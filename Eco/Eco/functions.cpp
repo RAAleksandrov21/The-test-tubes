@@ -48,7 +48,7 @@ void menu()  // Main Menu
 }
 
 
-void seedRandomGenerator() {
+void seedRandomGenerator() { 
     static bool seeded = false;
     if (!seeded) {
         srand(time(NULL));

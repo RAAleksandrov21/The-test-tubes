@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "functions.h"
+#include "functions.h"  
 #include <string>
 
 using namespace std;
@@ -14,41 +14,37 @@ int main()
     char playAgain;
     bool failed = false;
     do {
-        system("cls");
-        greet();
-        airQuality = 0;
+        system("cls");  // Clear the console screen
+        greet();  // Display game title and slogan
+        airQuality = 0;  // Reset initial values
         waterQuality = 0;
         speciesCount = 0;
         int choice;
-        menu();
+        menu();  // Display game mode menu
         cin >> choice;
         if (choice == 4)
         {
             system("cls");
-            exit(0);
+            exit(0);  // Exit the program if the user chooses to quit
         }
-        system("cls");
+        system("cls");  // Clear the console screen
 
         if (choice == 1 || choice == 2 || choice == 3)
         {
-            greet();
+            greet();  // Display game title and slogan again
 
-            cout << setw(125) << "Welcome to Eco-Conservation Challenge!" << endl;
-            cout << setw(135) << "You are responsible for the health of a virtual ecosystem." << endl;
-            for (int i = 0; i < 10; i++)
-            {
-                cout << endl;
-            }
+            cout << "Welcome to Eco-Conservation Challenge!" << endl;
+            cout << "You are responsible for the health of a virtual ecosystem." << endl;
 
             while (true) {
                 displayStatus(airQuality, waterQuality, speciesCount);
-                int result1 = random1();
+                int result1 = random1();  // Generate random scenarios
                 int result2 = random2(result1);
                 int result3 = random3(result1, result2);
                 cout << endl;
-                generateQuestion(result1);
+                generateQuestion(result1);  // Display questions based on scenarios
                 cout << endl;
-                generatePicture(result1);
+                generatePicture(result1);  // Display pictures based on scenarios
                 cout << endl;
                 cout << "Enter your decision (1-3): " << endl;
                 int decision;
