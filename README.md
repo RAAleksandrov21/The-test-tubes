@@ -19,7 +19,7 @@
 ## 💻 Description <a name="description"></a>
 
 <p align = "center">
-  <img src = "Logo_for_team/Logo_game.png" alt = "Logo_game.png" width="500px">
+  <img src = "Picture/Logo_game.png" alt = "Logo_game.png" width="500px">
 </p>
 Our task was to connect the game with chemistry and biology. We tried to do that as much as possible. In our game you will see three levels of difficulty , it is completely related to ecology and the problems in it.
 
