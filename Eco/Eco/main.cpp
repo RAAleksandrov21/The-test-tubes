@@ -86,14 +86,23 @@ int main()
 
                 applyDecision(airQuality, waterQuality, speciesCount, decision, result3);
 
-
+                system("cls");  // Clear the console screen
                 if (isEcoSystemBalanced(airQuality, waterQuality, speciesCount, choice)) {
-                    cout << "Congratulations! You've successfully conserved the ecosystem." << endl;
+                    cout << setw(119) << "__   __                     _       " << endl;
+                    cout << setw(119) << "\\ \\ / /__  _   _  __      _(_)_ __  " << endl;
+                    cout << setw(119) << " \\ V / _ \\| | | | \\ \\ /\\ / / | '_ \\ " << endl;
+                    cout << setw(119) << "  | | (_) | |_| |  \\ V  V /| | | | |" << endl;
+                    cout << setw(119) << "  |_|\\___/ \\__,_|   \\_/\\_/ |_|_| |_|" << endl;
+                    cout << endl;
                     break;
                 }
                 else
                 {
-                    cout << "You couldn't conserve the ecosystem :(" << endl;
+                    cout << setw(119) << "__   __            _                " << endl;
+                    cout << setw(119) << "\\ \\ / /__  _   _  | | ___  ___  ___ " << endl;
+                    cout << setw(119) << " \\ V / _ \\| | | | | |/ _ \\/ __|/ _ \\" << endl;
+                    cout << setw(119) << "  | | (_) | |_| | | | (_) \\__ \\  __/" << endl;
+                    cout << setw(119) << "  |_|\\___/ \\__,_| |_|\\___/|___/\\___|" << endl;
                     failed = true;
                     break;
                 }
